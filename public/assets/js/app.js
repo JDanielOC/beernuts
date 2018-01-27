@@ -5,10 +5,16 @@ var express    = require('express'),
 
 // Application initialization
 
-var connection = mysql.createConnection({
+var connection;
+
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+connection= mysql.createConnection({
         host     : 'localhost',
         user     : 'root',
-        password : 'password'
+        password : '5eLUrWj=$J',
+        database : 'beernuts_seq_db'
     });
     
 var app = module.exports = express.createServer();
