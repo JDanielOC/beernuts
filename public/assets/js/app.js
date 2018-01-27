@@ -5,18 +5,18 @@ var mysql = require('mysql');
 
 // Application initialization
 
-var connection = require('../controllers/connection.js');
+// var connection = require('../controllers/connection.js');
 
-if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-connection = mysql.createConnection({
-        host     : 'localhost',
-        user     : 'root',
-        password : '5eLUrWj=$J',
-        database : 'beernuts_seq_db'
-    });
-};    
+// if (process.env.JAWSDB_URL) {
+//     connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+// connection = mysql.createConnection({
+//         host     : 'localhost',
+//         user     : 'root',
+//         password : '5eLUrWj=$J',
+//         database : 'beernuts_seq_db'
+//     });
+// };    
     
 var app = module.exports = express.createServer();
 
