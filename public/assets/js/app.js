@@ -5,7 +5,7 @@ var mysql = require('mysql');
 
 // Application initialization
 
-var connection;
+var connection = require('../controllers/connection.js');
 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
